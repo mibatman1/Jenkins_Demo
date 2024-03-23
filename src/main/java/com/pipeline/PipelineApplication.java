@@ -9,7 +9,15 @@ public class PipelineApplication {
 	public static void main(String[] args) 
 	{
 		SpringApplication.run(PipelineApplication.class, args);
-		System.out.println("Hello");
+		new java.util.Timer().schedule(
+                new java.util.TimerTask() {
+                    @Override
+                    public void run() {
+                        System.exit(0); 
+                    }
+                },
+                20000 
+        );
 	}
 
 }
